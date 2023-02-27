@@ -121,8 +121,12 @@ class ArticleController extends Controller
     {
         $request->validate([
 
+         
+
             'title_fr' => 'required|min:5',
-            'content_fr' => 'required|min:10'
+            'title' => 'required|min:5',
+            'content' => 'required|min:10',
+            'content_fr' => 'required|min:10',
 
         ]);
 

@@ -75,10 +75,20 @@
                                     <div class="control-group col-12">
                                         <label for="title" class="text-secondary">Title du article</label>
                                         <input type="text" id="titl" name="title" class="form-control" value="{{$unArticle->title}}">
+                                        @if($errors->has('title'))
+                                            <div class="text-danger mt-2">
+                                                {{$errors->first('title')}}
+                                            </div>
+                                        @endif
                                     </div>
                                     <div class="control-group col-12">
                                         <label for="content" class="text-secondary">Article</label>
                                         <textarea id="content" name="content" class="form-control" rows="5" cols="30"> {{$unArticle->content}}</textarea>
+                                        @if($errors->has('content'))
+                                            <div class="text-danger mt-2">
+                                                {{$errors->first('content')}}
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="card-footer">
