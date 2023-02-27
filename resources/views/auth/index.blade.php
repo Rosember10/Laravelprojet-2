@@ -42,7 +42,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group mb-3">   
-                                        <input type="text" placeholder="@lang('lang.auth_motpass')" class="form-control" name="password">
+                                        <input type="password" placeholder="@lang('lang.auth_motpass')" class="form-control" name="password">
                                         @if($errors->has('password'))
                                             <div class="text-danger mt-2">
                                                 {{$errors->first('password')}}
